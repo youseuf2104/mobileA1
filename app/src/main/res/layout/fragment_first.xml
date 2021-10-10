@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <!-- Create to take a user inputted value (used for EMI calculation)-->
+    <EditText
+        android:id="@+id/mortgageAmount"
+        android:layout_width="338dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextstyle"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/interestRate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <!-- Used as caption for the user input-->
+    <TextView
+        android:id="@+id/mortageNumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/averia_serif_libre_light"
+        android:text="@string/mortgageAmountText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/mortgageAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <!-- Used as caption for the user input-->
+    <TextView
+        android:id="@+id/interestNumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/averia_serif_libre_light"
+        android:text="@string/interestText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/interestRate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mortgageAmount"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <!-- Create to take a user inputted value (used for EMI calculation)-->
+    <EditText
+        android:id="@+id/interestRate"
+        android:layout_width="338dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextstyle"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <!-- Used as caption for the user input-->
+    <TextView
+        android:id="@+id/numYearsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/averia_serif_libre_light"
+        android:text="@string/yearsText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRate" />
+
+    <!-- Create to take a user inputted value (used for EMI calculation)-->
+    <EditText
+        android:id="@+id/numYears"
+        android:layout_width="338dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittextstyle"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numYearsText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Button used to call the calculateEMI() function to update the calculatedValue text-->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="135dp"
+        android:layout_height="57dp"
+        android:text="@string/calculateText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numYears"
+        app:layout_constraintVertical_bias="0.374" />
+
+    <!-- Holds the calculated EMI value, which is initially empty. Updates after pressing the button-->
+    <TextView
+        android:id="@+id/calculatedValue"
+        android:layout_width="344dp"
+        android:layout_height="75dp"
+        android:fontFamily="monospace"
+        android:text="@string/calculatedAmount"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

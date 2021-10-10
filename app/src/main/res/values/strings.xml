@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EmiCalculator</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+
+    <!-- Creating the string reference values (for the texts) -->
+   <string name="first_fragment_label">EMI Calculator</string>
+   <string name="mortgageAmountText"> Enter Total Mortgage Amount:</string>
+   <string name="interestText"> Enter Interest Rate (%): </string>
+   <string name="yearsText"> Enter Amortization Period (Years): </string>
+   <string name="calculateText"> Calculate EMI </string>
+   <string name="calculatedAmount">  </string>
+</resources>
