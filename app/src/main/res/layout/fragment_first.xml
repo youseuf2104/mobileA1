@@ -111,13 +111,13 @@
     <!-- Holds the calculated EMI value, which is initially empty. Updates after pressing the button-->
     <TextView
         android:id="@+id/calculatedValue"
-        android:layout_width="344dp"
-        android:layout_height="75dp"
+        android:layout_width="354dp"
+        android:layout_height="84dp"
         android:fontFamily="monospace"
         android:text="@string/calculatedAmount"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
